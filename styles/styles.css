@@ -44,6 +44,11 @@ nav {
     z-index: 1;
 }
 
+nav img {
+    max-width: 50px;
+    max-height: 50px;
+}
+
 nav ul {
     list-style: none;
     padding: 0.625rem 0.625rem;
@@ -67,6 +72,10 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #fff;
     color:#d6adad;
+}
+
+.dropdown {
+    display:none;
 }
 
 /* MAIN CONTENT */
@@ -136,12 +145,16 @@ main {
 
 .code {
     font-family: 'VT323', monospace;
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 .creative {
     font-family: 'Dancing Script', cursive;
-    font-size: 1.5em;
+    font-size: 2em;
+}
+
+.description {
+    margin-top: 100px;
 }
 
 /* ABOUT SECTION */
@@ -153,6 +166,7 @@ main {
 
 #about span {
     color:#d6adad;
+    -webkit-text-stroke: 0.5px #000;
 }
 
 /* SKILL SECTION */
@@ -197,10 +211,18 @@ main {
     height: 100%;
 }
 
+#projects .card {
+    min-height: 500px;
+}
+
 /* CONTACT SECTION */
 
 #contact {
     background-color:#d6adad;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 #contact .img-container img {
@@ -213,4 +235,59 @@ main {
 footer {
     background-color:#efd6ce;
     text-align: center;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width:682px) {
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav button {
+        background-color: #efd6ce;
+        padding: 1.11em;
+        border: none;
+        text-decoration: none;
+        text-transform: lowercase;
+        border-radius: 20px 10px;
+        transition: 0.3s
+    }
+
+    nav button:hover {
+        background-color:#fff;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        margin-top: -20px;
+        padding-bottom: 10px;
+    }
+
+    .dropbutton {
+        width: 100%;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #d6adad;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .show {
+        display:block;
+    }
+
+    .dropbutton img {
+        max-width: 30px;
+    }
+
+    .navigation-pc {
+        display: none;
+    }
 }

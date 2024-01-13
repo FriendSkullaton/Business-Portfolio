@@ -14,13 +14,28 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="#top">Top</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div class="navigation-pc">
+                <ul>
+                    <li><a href="#top">Top</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="dropdown">
+                <button onclick="dropdownMenu()" class="dropbutton" aria-label="Menu Navigation Dropdown"><img src="./resources/menu-bar.png" alt="Menu Navigation Dropdown"></button>
+                <div id="dropdown" class="dropdown-content">
+                    <ul>
+                        <li><a href="#top">Top</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
@@ -36,7 +51,7 @@
         <section id="about">
             <h2>About</h2>
             <p>Hi! I'm <span>Shan</span>! I'm also known as Skell or Skullaton on the internet-sphere!</p>
-            <p>I'm a budding web developer that resides in <span>Sydney, Australia!</span></p>
+            <p>I'm a budding web developer that resides in <span>Sydney, Australia</span>!</p>
             <p>I started to upskill back in 2023, where I started to learn front-end dev from multiple online sources, ranging from the Odin Project, freeCodeCamp, as well as CodeCademy.</p>
         </section>
         <section id="skills">
@@ -109,7 +124,8 @@
         </section>
     </main>
     <footer>
-        <p>Built by me!!! :D</p>
+        <p>Built by Shan 2024</p>
     </footer>
 </body>
+<script src="script.js"></script>
 </html>
