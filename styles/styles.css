@@ -9,9 +9,21 @@ html {
     line-height: 2.5em;
 }
 
+body {
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
 h1 {
     font-family: 'La Belle Aurore', cursive;
     font-size: 5em;
+    background-color:#d6adad;
+    transition: 0.3s;
+}
+
+h1:hover {
+    letter-spacing: 5px;
 }
 
 h2 {
@@ -28,6 +40,7 @@ h3 {
 p, a {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
+
 
 
 /* NAVIGATION BAR */
@@ -113,6 +126,11 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 .img-container {
@@ -123,16 +141,27 @@ main {
 
 /* TOP SECTION */
 
-#top .img-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
+#top .img-container {
     opacity: 0.5;
     transition: 0.3s;
+    position: relative;
+    display: inline-block;
 }
 
-#top .img-container img:hover {
+#top .img-container img {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+#top .img-container:hover {
     opacity: 1;
+}
+
+.overlay {
+    background: linear-gradient(to right, #d6adad, #efd6ce);
+    border-radius: 50%;
+    animation: bounceIn 2s infinite 0.3s;
 }
 
 #top {
@@ -165,10 +194,13 @@ main {
 }
 
 #about span {
-    color:#d6adad;
-    -webkit-text-stroke: 0.5px #000;
+    background-color:#d6adad;
+    transition: 0.3s;
 }
 
+#about span:hover {
+    letter-spacing: 3px;
+}
 /* SKILL SECTION */
 
 #skills {
@@ -228,6 +260,17 @@ main {
 #contact .img-container img {
     max-width: 100%;
     height: auto;
+    transition: 0.3s;
+}
+
+#contact .img-container img:hover {
+    opacity: 0.5;
+}
+
+#contact .container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 /* FOOTER */
@@ -290,4 +333,65 @@ footer {
     .navigation-pc {
         display: none;
     }
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+@keyframes bounceIn {
+	0%, 80% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  5% {
+    transform:translateY(-3px);
+  }
+
+  10% {
+    transform: translateY(-5px);
+  }
+
+  15% {
+    transform: translateY(-8px);
+  }
+
+  20% {
+    transform: translateY(-10px);
+  }
+  30% {
+    transform:translateY(-15px);
+  }
+	40% {
+    transform: translateY(-20px);
+  }
+
+  50% {
+    transform: translateY(-15px)
+  }
+
+    60% {
+    transform: translateY(-10px);
+  }
+  70% {
+    transform:translateY(-5px);
+  }
+
+  90% {
+    transform: translateY(5px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+
+  
 }
