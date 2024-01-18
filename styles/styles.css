@@ -238,11 +238,6 @@ main {
     border: 2px solid #fff;
 }
 
-#projects .img-container .long {
-    width: auto;
-    height: 100%;
-}
-
 #projects .card {
     min-height: 500px;
 }
